@@ -922,15 +922,9 @@
                         <a href="<?php echo e(url('my-transactions/'.date('Y').'/'.date('m'))); ?>"><i class="dripicons-swap"></i> <?php echo e(trans('file.My Transaction')); ?></a>
                       </li>
                       <?php if(Auth::user()->role_id != 5): ?>
-                      <li>
-                        <a href="<?php echo e(url('holidays/my-holiday/'.date('Y').'/'.date('m'))); ?>"><i class="dripicons-vibrate"></i> <?php echo e(trans('file.My Holiday')); ?></a>
-                      </li>
+                     
                       <?php endif; ?>
-                      <?php if($empty_database_permission_active): ?>
-                      <li>
-                        <a onclick="return confirm('Are you sure want to delete? If you do this all of your data will be lost.')" href="<?php echo e(route('setting.emptyDatabase')); ?>"><i class="dripicons-stack"></i> <?php echo e(trans('file.Empty Database')); ?></a>
-                      </li>
-                      <?php endif; ?>
+                     
                       <li>
                         <a href="<?php echo e(route('logout')); ?>"
                            onclick="event.preventDefault();

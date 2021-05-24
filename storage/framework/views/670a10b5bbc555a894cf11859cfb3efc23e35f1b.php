@@ -346,7 +346,7 @@ var lims_product_code = [
         }));
     },
     response: function(event, ui) {
-        if (ui.content.length == 1) {
+        if (ui.content.length == 10) {
             var data = ui.content[0].value;
             $(this).autocomplete( "close" );
             productSearch(data);
